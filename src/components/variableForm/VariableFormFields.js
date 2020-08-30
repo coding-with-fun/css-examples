@@ -15,6 +15,9 @@ function VariableFormFields() {
 	};
 
 	const onAddHandler = (index) => {
+		console.log(inputFields);
+		if (index === undefined) index = inputFields.length;
+		console.log(index);
 		if (
 			inputFields[index + 1]?.firstName !== '' &&
 			inputFields[index - 1]?.firstName !== ''
@@ -68,7 +71,7 @@ function VariableFormFields() {
 						</button>
 					</div>
 				))}
-				<button type='button' onClick={() => onAddHandler(-1)}>
+				<button type='button' onClick={() => onAddHandler()}>
 					+
 				</button>
 

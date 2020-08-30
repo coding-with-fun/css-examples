@@ -19,8 +19,10 @@ function VariableFormFields() {
 		if (index === undefined) index = inputFields.length;
 		console.log(index);
 		if (
-			inputFields[index + 1]?.firstName !== '' &&
-			inputFields[index - 1]?.firstName !== ''
+			(inputFields[index + 1]?.firstName !== '' &&
+				inputFields[index - 1]?.firstName !== '') ||
+			(inputFields[index + 1]?.lastName !== '' &&
+				inputFields[index - 1]?.lastName !== '')
 		) {
 			setInputFields([
 				...inputFields,
@@ -46,6 +48,11 @@ function VariableFormFields() {
 			values[values.length - 1]?.lastName === ''
 		)
 			values.splice(-1, 1);
+		if (
+			values[values.length - 1]?.firstName === '' &&
+			values[values.length - 1]?.lastName === ''
+		)
+			values.splice(-1, 1);
 		console.log('Input Fields = ', values);
 	};
 
@@ -65,6 +72,7 @@ function VariableFormFields() {
 							name='lastName'
 							value={inputField.lastName}
 							onChange={(e) => onChangeHandler(index, e)}
+							onClick={() => onAddHandler(index)}
 						/>
 						<button type='button' onClick={() => onDeleteHandler(index)}>
 							-

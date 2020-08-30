@@ -1,0 +1,52 @@
+.flex-box {
+	.container {
+		height: 80vh;
+		width: 99%;
+		border: 2px solid black;
+		display: flex;
+
+		/* Properties for Flex container */
+
+		/*  */
+
+		/* Vertical position */
+		/* flex-direction: column; */
+
+		/* Horizontal position */ /* Default is row */
+		/* flex-direction: row; */
+
+		/*  */
+
+		/* Usually used with flex row for best results */
+		/* It maintains the width of element and moves it aside accordingly */
+		/* flex-wrap: wrap; */
+
+		/*  */
+
+		/* Combine flex-direction and flex-flow */
+		/* flex-flow: row wrap; */
+		/* flex-flow: column; */
+
+		/*  */
+
+		/* Vertical align of item with flex direction column or vice versa */
+		/* justify-content: center; */
+		/* justify-content: space-evenly; */
+		/* Horizontal align of item with flex direction column or vice versa */
+		/* align-items: center; */
+
+		.item {
+			width: 200px;
+			height: 200px;
+			background-color: aqua;
+			border: 2px solid red;
+			margin: 10px;
+			padding: 3px;
+		}
+
+		#item-2 {
+			/* Horizontal align of item with flex direction column or vice versa */
+			align-self: center;
+		}
+	}
+}

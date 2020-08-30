@@ -1,0 +1,22 @@
+.home-page {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+
+	button {
+		cursor: pointer;
+		margin: 10px;
+		padding: 10px;
+		border: none;
+		background-color: #ffffff;
+		font-size: medium;
+		border-radius: 10px;
+	}
+
+	button:hover {
+		background-color: #f7c0cb;
+		transition: all 0.5s ease-in-out;
+	}
+}

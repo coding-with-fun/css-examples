@@ -8,6 +8,9 @@ function HomePage() {
 			<button onClick={() => history.push('flexbox')}>Flex box</button>
 			<button onClick={() => history.push('rightnav')}>Right Navbar</button>
 			<button onClick={() => history.push('topnav')}>Top Navbar</button>
+			<button onClick={() => history.push('varform')}>
+				Variable Form Field
+			</button>
 		</div>
 	);
 }

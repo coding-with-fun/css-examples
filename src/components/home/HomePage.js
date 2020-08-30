@@ -6,6 +6,7 @@ function HomePage() {
 	return (
 		<div className='home-page'>
 			<button onClick={() => history.push('flexbox')}>Flex box</button>
+			<button onClick={() => history.push('rightnav')}>Right Navbar</button>
 		</div>
 	);
 }
